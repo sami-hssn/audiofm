@@ -33,43 +33,6 @@ export default function SearchBar({ title }) {
         }
     ]
 
-    const bassFilterObj = [
-        {
-            name: "LoremTwo",
-            value: "loremtwo"
-        },
-        {
-            name: "LoremTwo2",
-            value: "loremtwo2"
-        },
-        {
-            name: "LoremTwo3",
-            value: "loremtwo3"
-        },
-        {
-            name: "LoremTwo4",
-            value: "loremtwo4"
-        }
-    ]
-
-    const drumsFilterObj = [
-        {
-            name: "LoremThr",
-            value: "loremthr"
-        },
-        {
-            name: "LoremThr2",
-            value: "loremthr2"
-        },
-        {
-            name: "LoremThr3",
-            value: "loremthr3"
-        },
-        {
-            name: "LoremThr4",
-            value: "loremthr4"
-        }
-    ]
 
     return (
 
@@ -126,66 +89,7 @@ export default function SearchBar({ title }) {
                         }
                     </div>
                 </fieldset>
-                <fieldset>
-                    <legend>
-                        Bass
-                    </legend>
-                    <div className='default-filter-container'>
-                        {
-                            bassFilterObj.map( ( iterator ) => {
-
-                                return (
-
-                                    <div className='filter-container transparent-btn'>
-                                        <input 
-                                            type="radio" 
-                                            id={ iterator.value }
-                                            name="family" 
-                                            value={ iterator.value }
-                                        />
-                                        <label 
-                                            htmlFor={ iterator.value }
-                                        >
-                                            { iterator.name }
-                                        </label>
-                                    </div>
-
-                                )
-
-                            })
-                        }
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>
-                        Drums
-                    </legend>
-                    <div className='default-filter-container'>
-                        {
-                            drumsFilterObj.map( ( iterator ) => {
-
-                                return (
-
-                                    <div className='filter-container transparent-btn'>
-                                        <input 
-                                            type="radio" 
-                                            id={ iterator.value }
-                                            name="family" 
-                                            value={ iterator.value }
-                                        />
-                                        <label 
-                                            htmlFor={ iterator.value }
-                                        >
-                                            { iterator.name }
-                                        </label>
-                                    </div>
-                                    
-                                )
-
-                            })
-                        }
-                    </div>
-                </fieldset>
+                
             </form>
                 
             : null }

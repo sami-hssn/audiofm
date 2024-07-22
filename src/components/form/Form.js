@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Form.css';
 
 export default function Form ({    
@@ -7,6 +7,15 @@ export default function Form ({
     link,
     secondaryLink
 }){
+
+    const navigate = useNavigate();
+
+    const authenticate = ( event ) => {
+
+        event.preventDefault();
+        navigate( '/profile' )
+
+    }
 
     return (
 
@@ -17,7 +26,7 @@ export default function Form ({
                 </legend>         
             : null }
             { fieldsArr ?
-                fieldsArr.map( ( iterator) => {
+                fieldsArr.map( ( iterator ) => {
                     return (
                         <> 
                             <label htmlFor={ iterator.value }>
@@ -34,7 +43,7 @@ export default function Form ({
                 </Link>
             : null }
             { link ?
-                <button>
+                <button onClick={ ( event ) => authenticate( event ) }>
                     { link }
                 </button>
             : null }

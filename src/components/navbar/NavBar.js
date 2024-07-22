@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
-import { BunnyIcon, Hamburger, Close } from '../svg';
+import { BunnyIcon, Hamburger, Close, Profile } from '../svg';
+import { AppContext } from '../contexts/AppContext';
 
 function NavBar(){
 
     const location = useLocation();
 
     const [ isOpen, setIsOpen ] = useState( false );
+
+    const bodyEl = document.querySelector('body');
+
+    const { prefLang } = useContext(AppContext);
 
     return(
 
@@ -27,10 +32,14 @@ function NavBar(){
 
                 <div className='nav-cta-container desktop-nav'>
                     <Link to="/login" relative='path'>
-                        Login
+                        { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                            'Login' : 'Se connecter'
+                        }
                     </Link>
                     <Link to="/signup" relative='path'>
-                        Sign up
+                        { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                            'Sign up' : "S'inscrire"
+                        }
                     </Link>
                 </div>
                 <button 
@@ -38,6 +47,7 @@ function NavBar(){
                     onClick={() => {
 
                         setIsOpen( !isOpen )
+                        bodyEl.style.overflowY = 'hidden'
                     
                     }}
                 >
@@ -53,7 +63,9 @@ function NavBar(){
                             to="/"
                             className={ location.pathname === '/' ? 'current-nav-link' : null}
                         >
-                            Home
+                            { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                "Home": "Accueil"
+                            }
                         </Nav.Link>
                         <Nav.Link 
                             as={Link} 
@@ -61,7 +73,9 @@ function NavBar(){
                             to="/projects"
                             className={ location.pathname === '/projects' ? 'current-nav-link' : null}
                         >
-                                Projects
+                            { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                "Projects": "Projets"
+                            }
                         </Nav.Link>
                         <Nav.Link 
                             as={Link} 
@@ -69,7 +83,9 @@ function NavBar(){
                             to="/samples"
                             className={ location.pathname === '/samples' ? 'current-nav-link' : null}
                         >
-                            Samples
+                            { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                "Samples": "Extraits"
+                            }
                         </Nav.Link>
                         <Nav.Link 
                             as={Link} 
@@ -77,7 +93,9 @@ function NavBar(){
                             to="/collaborate"
                             className={ location.pathname === '/collaborate' ? 'current-nav-link' : null}
                         >
-                            Collaborate
+                            { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                "Collaborate": "Collaborer"
+                            }
                         </Nav.Link>
                         <Nav.Link 
                             as={Link} 
@@ -85,8 +103,17 @@ function NavBar(){
                             to="/tutorials"
                             className={ location.pathname === '/tutorials' ? 'current-nav-link' : null}
                         >
-                            Tutorials
+                            { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                "Tutorials": "Tutoriels"
+                            }
                         </Nav.Link>
+                        <Link 
+                            to="/profile"
+                            relative='path'
+                            className='profile-link'
+                        >
+                            <Profile color="white" />
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -99,6 +126,7 @@ function NavBar(){
                             onClick={ () => {
 
                                 setIsOpen( !isOpen )
+                                bodyEl.style.overflowY = 'scroll'
 
                             } }
                         >
@@ -114,7 +142,9 @@ function NavBar(){
     
                                 } }
                             >
-                                Home
+                                { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                    "Home": "Accueil"
+                                }
                             </Link>
                         </li>
                         <li className='dropdown-main-li'>
@@ -127,7 +157,9 @@ function NavBar(){
     
                                 } }
                             >
-                                Projects
+                                { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                    "Projects": "Projets"
+                                }
                             </Link>
                         </li>
                         <li className='dropdown-main-li'>
@@ -140,7 +172,9 @@ function NavBar(){
     
                                 } }
                             >
-                                Samples
+                                { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                    "Samples": "Extraits"
+                                }
                             </Link>
                         </li>
                         <li className='dropdown-main-li'>
@@ -153,7 +187,9 @@ function NavBar(){
     
                                 } }
                             >
-                                Collaborate
+                                { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                    "Collaborate": "Collaborer"
+                                }
                             </Link>
                         </li>
                         <li className='dropdown-main-li'>
@@ -166,7 +202,9 @@ function NavBar(){
     
                                 } }
                             >
-                                Tutorials
+                                { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                    "Tutorials": "Tutoriels"
+                                }
                             </Link>
                         </li>
                         <div className='dropdown-user-cta'>
@@ -180,7 +218,9 @@ function NavBar(){
         
                                     } }
                                 >
-                                    Login
+                                    { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                        'Login' : 'Se connecter'
+                                    }
                                 </Link>
                             </li>
                             <li>
@@ -193,7 +233,9 @@ function NavBar(){
         
                                     } }
                                 >
-                                    Sign up
+                                    { prefLang === 'e' || prefLang === null || prefLang === ''  ?
+                                        'Sign up' : "S'inscrire"
+                                    }
                                 </Link>
                             </li>
                         </div>

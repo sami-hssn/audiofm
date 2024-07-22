@@ -1,0 +1,26 @@
+.profile-section {
+    margin: 0px 50px;
+}
+
+.profile-svg-wrapper {
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.profile-svg-wrapper svg {
+    height: 50px;
+    width: 50px;
+}
+
+.profile-name {
+    font-family: "Roboto Mono", monospace;
+    font-size: 30px;
+    color: #266CEF;
+}
+
+.profile-description {
+    font-size: 18px;
+    font-family: "Work Sans", sans-serif;
+}

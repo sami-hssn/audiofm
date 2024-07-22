@@ -12,7 +12,9 @@ export default function FeatureTwo({ featuresArr }){
                     return (
 
                         <Link to={ iterator.link }>
-                            <div className="feature-two-img" />
+                            <div>
+                                <img className="feature-two-img" src={ iterator.img } alt={ iterator.alt } />
+                            </div>
                         </Link>
 
                     )

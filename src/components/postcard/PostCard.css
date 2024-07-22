@@ -25,6 +25,7 @@
     height: 220px;
     width: 220px;
     margin-right: 30px;
+    object-fit: cover;
 }
 
 .post-card-link-container a {
@@ -53,6 +54,7 @@
 
 .post-card-inside-container p {
     margin: 0px;
+    font-family: "Work Sans", sans-serif;
 }
 
 .save-btn {

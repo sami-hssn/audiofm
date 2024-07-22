@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Footer";
 import Form from "../components/form/Form";
 import NavBar from "../components/navbar/NavBar";
 import '../styles/index.css'
@@ -39,6 +40,7 @@ function SignupPage(){
                         }
                     />
                 </div>
+                <Footer />
             </div>
         </div>
     );

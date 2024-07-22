@@ -1,22 +1,28 @@
 import './ProjectCard.css';
 
-export default function ProjectCard () {
+export default function ProjectCard ({ img, alt, profileText, profileDescription }) {
 
     return( 
 
         <div className='project-card'>
             <div className='upper-project-card-container'>
-                <div className='project-profile-img' />
+                <div>
+                    <img src={ img } className='project-profile-img' />
+                </div>
                 <div className='project-profile-text'>
                     <p>
-                        Lorem
+                        { profileText }
                     </p>
                     <p>
-                        Lorem Ipsum
+                        <b>
+                        { profileDescription }
+                        </b>
                     </p>
                 </div>
             </div>
-            <div className='project-img' />
+            <div>
+                <img className='project-img' src={ img } alt={ alt } />
+            </div>
         </div>
         
     );

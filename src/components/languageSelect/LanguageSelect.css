@@ -1,0 +1,99 @@
+.language-select-modal {
+    min-height: 50vh;
+    min-width: 50vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #CFE8FF;
+    border-radius: 50px;
+    z-index: 30;
+    padding: 30px;
+}
+
+.language-select-overlay {
+    position: absolute;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+    z-index: 20;
+    height: 100%;
+}
+
+.language-select-overlay {
+    cursor: pointer;
+}
+
+.language-select-modal legend {
+    font-size: 26px;
+    color: #266CEF;
+    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
+}
+
+.language-select-modal input[type="radio"] {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+.language-select-modal .icon {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.language-select-modal .lang-button {
+    display: inline-block;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid hsla(0,0%,83%,.8);
+}
+
+.language-select-modal legend {
+    padding-bottom: 20px;
+}
+
+.language-select-modal .selected-lang-button {
+    background-color: #84D0F0;
+}
+
+.language-select-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.language-select-modal .space-y-8>:not([hidden])~:not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem* calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem* var(--tw-space-y-reverse));
+}
+
+button[type="submit"] {
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: 1px solid hsla(0,0%,83%,.8);
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) { 
+
+    .language-select-modal {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: inherit;
+    }
+
+}

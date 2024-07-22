@@ -96,6 +96,9 @@ a.current-nav-link {
 
 .upper-nav-container .main-link {
     font-size: 48px;
+    position: absolute;
+    left: 50%;
+    transform: translateX( -50% );
 }
 
 .profile-container {
@@ -167,9 +170,18 @@ a.current-nav-link {
     padding-left: 15px;
 }
 
+.profile-link {
+    position: absolute;
+    right: 50px;
+}
+
 @media (max-width: 1280px) { 
 
     .desktop-nav {
+        display: none;
+    }
+
+    .profile-link {
         display: none;
     }
 
@@ -199,6 +211,10 @@ a.current-nav-link {
     .nav-icon svg {
         width: 50px;
         height: auto;
+    }
+
+    .main-link {
+        display: none;
     }
 
 }

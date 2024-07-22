@@ -20,6 +20,7 @@
     border-radius: 50%;
     height: 220px;
     width: 220px;
+    object-fit: cover;
 }
 
 @media (max-width: 1024px) { 

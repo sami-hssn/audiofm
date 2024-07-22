@@ -7,7 +7,8 @@ export default function PostCard({
     title,
     description,
     linkObj,
-    padding
+    padding,
+    img
 }) {
 
     const [ isSaved, setIsSaved ] = useState( false )
@@ -15,11 +16,14 @@ export default function PostCard({
     return (
 
         <div className={ padding ? 'post-card-container first-post-card' : 'post-card-container' }>
-            <div className='post-card-img'/>
+            <div>
+                <img className='post-card-img' src={ img } />
+            </div>
             <div className='post-card-inside-container'>
                 { title ?
-                <p>
+                <p><b>
                     { title }
+                    </b>
                 </p>
                 : null }
                 { description ?
@@ -29,14 +33,12 @@ export default function PostCard({
                 : null }
                 { linkObj ?
                 <div className='post-card-link-container'>
-                    <Link to={ linkObj.link }>
-                        <span>
-                            { linkObj.title }
-                        </span>
+                
+                       
                         <div className='post-card-svg-container'>
                             <RightArrow />
                         </div>
-                    </Link>
+                    
                 </div>
                 : null }
             </div>
