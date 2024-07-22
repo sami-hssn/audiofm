@@ -3,6 +3,7 @@ import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/NavBar";
 import ProfileSection from "../components/profilesection/ProfileSection";
 import ProjectCard from "../components/projectcard/ProjectCard";
+import Poll from "../components/poll/Poll";
 
 export default function ProfilePage () {
 
@@ -13,6 +14,7 @@ export default function ProfilePage () {
                 <NavBar title="Home"/>
                 <div className="secondary-wrapper">
                     <ProfileSection />
+                    <Poll title="What is your favourite type of music?"/>
                     <CarouselWrapper title="Projects" isPost={ true }>
                         <ProjectCard 
                             img="https://pbs.twimg.com/media/GO8XcsfX0AAcrdQ?format=jpg&name=4096x4096" 

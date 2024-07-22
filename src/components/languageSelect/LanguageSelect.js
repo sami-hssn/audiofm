@@ -49,7 +49,7 @@ export default function LanguageSelect (){
                                     htmlFor='english'
                                     className={ selectedLang === 'e' || selectedLang === null || selectedLang === '' ? 'selected-lang-button lang-button' : 'lang-button' }
                                 >
-                                    <img className="icon" src={ EnglishIcon }/>
+                                    <img className="icon" src={ EnglishIcon } alt='American flag signifying English'/>
                                     English 
                                 </label>
                                 <input 
@@ -62,7 +62,7 @@ export default function LanguageSelect (){
                                     htmlFor='french'
                                     className={ selectedLang === 'f' ? 'selected-lang-button lang-button' : 'lang-button' }
                                 >
-                                    <img className="icon"  src={ FrenchIcon }/>
+                                    <img className="icon"  src={ FrenchIcon } alt='French flag signifying French'/>
                                     French
                                 </label>
                                 <input 

@@ -85,6 +85,7 @@ footer .selected-lang-button {
     .footer-nav,
     footer form {
         margin: 50px 0 0 0;
+        padding: 0;
     }
     
 }
