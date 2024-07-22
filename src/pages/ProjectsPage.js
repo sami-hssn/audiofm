@@ -16,7 +16,7 @@ function ProjectsPage(){
                     <CarouselWrapper title="Latest Projects" isPost={ true }>
                         <ProjectCard 
                             img="https://www.ballantines.com/cdn-cgi/image/format=auto%2Cwidth=2000/https://www.ballantines.com/wp-content/uploads/2021/08/seth-troxler-true-music-ballantines-boiler-room-3-new.jpeg" 
-                            alt="Man on a turn table." 
+                            alt="Male Disc Jockey." 
                             profileText="lshadow32"
                             profileDescription="Dark Shadow - S2024 Contest"
                         />
@@ -65,7 +65,7 @@ function ProjectsPage(){
                                 },
                                 padding : true,
                                 img : 'https://static.wikia.nocookie.net/loonatheworld/images/7/7a/%2B%2B_Promotional_Picture_Chuu.png/',
-                                alt: 'Chuu from Loona'
+                                alt: 'Chuu from Loona.'
 
                             }
                         }

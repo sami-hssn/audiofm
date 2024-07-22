@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './PostCard.css';
 import { RightArrow, Save } from '../svg';
 import { useState } from 'react';
@@ -8,7 +7,8 @@ export default function PostCard({
     description,
     linkObj,
     padding,
-    img
+    img,
+    alt
 }) {
 
     const [ isSaved, setIsSaved ] = useState( false )
@@ -17,7 +17,7 @@ export default function PostCard({
 
         <div className={ padding ? 'post-card-container first-post-card' : 'post-card-container' }>
             <div>
-                <img className='post-card-img' src={ img } />
+                <img className='post-card-img' src={ img } alt={ alt } />
             </div>
             <div className='post-card-inside-container'>
                 { title ?

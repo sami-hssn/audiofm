@@ -1,6 +1,5 @@
 import CarouselWrapper from "../components/carouselwrapper/CarouselWrapper";
 import Feature from "../components/feature/Feature";
-import FeatureTwo from "../components/featuretwo/FeatureTwo";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/NavBar";
 import SearchBar from "../components/search/SearchBar";
@@ -63,7 +62,7 @@ function SamplesPage(){
                         <Feature img="https://assets.shop.loblaws.ca/products/20119813001/b3/en/front/20119813001_front_a06_@2.png" 
                         alt="A pineapple."/>
                         <Feature img="https://i.pinimg.com/236x/61/38/62/6138625fadd1f4a57dc5b1eb773ecf4d.jpg" 
-                        alt="Woodstock, a bird from the Charlie Brown Peanuts series."/>
+                        alt="Woodstock, a bird from the Peanuts series."/>
                     </CarouselWrapper>
                 </div>
                 <Footer />

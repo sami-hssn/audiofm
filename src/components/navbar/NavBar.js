@@ -119,7 +119,7 @@ function NavBar(){
             </Navbar>
             { isOpen ? 
 
-                <div className='dropdown-menu'>
+                <div className='custom-dropdown-menu'>
                     <ul>
                         <button 
                             className='close-btn' 

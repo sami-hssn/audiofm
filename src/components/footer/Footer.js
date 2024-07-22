@@ -91,7 +91,7 @@ export default function Footer () {
                         className={ prefLang === 'e' || prefLang === null || prefLang === '' ? 'selected-lang-button lang-button' : 'lang-button' }
                         onClick={ () => { setLanguage( 'e' )}}
                     >
-                        <img className="icon" src={ EnglishIcon }/>
+                        <img className="icon" src={ EnglishIcon } alt='English'/>
                             { prefLang === 'e' || prefLang === null || prefLang === ''  ?
                                 "English": "Anglais"
                             }
@@ -106,7 +106,7 @@ export default function Footer () {
                         className={ prefLang === 'f' ? 'selected-lang-button lang-button' : 'lang-button' }
                         onClick={ () => { setLanguage( 'f' )}}
                     >
-                        <img className="icon"  src={ FrenchIcon }/>
+                        <img className="icon"  src={ FrenchIcon } alt='French'/>
                         { prefLang === 'e' || prefLang === null || prefLang === ''  ?
                             "French": "Français"
                         }
